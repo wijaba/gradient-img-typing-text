@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #e2edff;
+}
+
+/* VIDEO MEMBUAT IMAGE BORDER GRADIENT HOVER */
+.navbar {
+  background-image: linear-gradient(to right, #7450a1, #677ce7);
+}
+
+.hero {
+  padding-top: 6rem;
+}
+
+.hero img {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-left: 180px;
+  margin-bottom: -60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  background: linear-gradient(135deg, pink, #7450a1 50%, transparent 50%);
+  background-size: 250%;
+  background-position: 100% 100%;
+  transition: background 0.5s;
+}
+.hero img:hover {
+  background-position: 0% 0%;
+}
+/* VIDEO MEMBUAT IMAGE BORDER GRADIENT HOVER */
+
+/* MEMBUAT TEXT BERJALAN */
+.text {
+  display: flex;
+}
+.hero .text-static {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 22px;
+}
+.hero .text-jalan {
+  height: 90px;
+  margin-left: -25px;
+  line-height: 50px;
+  overflow: hidden;
+}
+.text-jalan li {
+  list-style: none;
+  color: #7450a1;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+  -webkit-animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.text-jalan li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.text-jalan li span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 150%;
+  width: 100%;
+  background: #e2edff;
+  border-left: 2px solid #7450a1;
+  animation: typing 3s steps(10) infinite;
+  -webkit-animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
